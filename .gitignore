@@ -1,0 +1,15 @@
+.vscode/
+.vscode
+.ipynb_checkpoints/
+.ipynb_checkpoints
+/data/raw
+__pycache__/
+loginfo/
+*Results_File.txt
+*trainprediction*
+*LSTM_model_*
+vrf.pkl
+ghi.pkl
+hw_data.pkl
+flow.pkl
+smoothed_buildingdata.pkl
