@@ -128,4 +128,4 @@ def single_bar_plot(bars: list, color, bar_label: str, saveloc: str, barwidth = 
 		# attach forward slash if saveloc does not have one
 		if not saveloc.endswith('/'):
 			saveloc += '/'
-		plt.savefig(saveloc + 'Weekly Energy Savings.png', bbox_inches='tight', dpi=300)
+		plt.savefig(saveloc + 'Weekly Energy Predictions.png', bbox_inches='tight', dpi=300)
