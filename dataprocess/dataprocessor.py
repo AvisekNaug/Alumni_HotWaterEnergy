@@ -357,7 +357,7 @@ def merge_df_columns(dlist):
 
 
 @timer
-def dataframeplot(df, lazy = True, style = '*', ylabel : str = 'Y-axis', xlabel : str = 'X-axis', legend = False):
+def dataframeplot(df, lazy = True, style = 'b--', ylabel : str = 'Y-axis', xlabel : str = 'X-axis', legend = False):
 	"""Inspects all the rows of data in one or separate plots
 	
 	Arguments:
@@ -366,7 +366,7 @@ def dataframeplot(df, lazy = True, style = '*', ylabel : str = 'Y-axis', xlabel 
 	Keyword Arguments:
 		lazy {bool} -- If true, single plot object plots all columns. Preferably set to false for plotting
 		 many columns(default: {True})
-		style {str} -- type of line (default: {'*'})
+		style {str} -- type of line (default: {'b--'})
 		ylabel {str} -- label for yaxis (default: {'Y-axis'})
 		xlabel {str} -- label for xaxis (default: {'X-axis'})
 		legend {bool} -- whether we want ot see legends. Turned off for many columns (default: {False})
@@ -377,7 +377,7 @@ def dataframeplot(df, lazy = True, style = '*', ylabel : str = 'Y-axis', xlabel 
 		plt.rcParams["figure.figsize"] = (width, height)
 		_, ax = plt.subplots(nrows = df.shape[1], squeeze=False)
 		for i,j in zip(df.columns,range(df.shape[1])):
-			df.plot(y=[i],ax=ax[j][0],style=['b--'], legend=legend)
+			df.plot(y=[i],ax=ax[j][0],style=[style], legend=legend)
 		ax[j][0].set_xlabel(xlabel)
 		ax[j][0].set_ylabel(ylabel)
 	else:
