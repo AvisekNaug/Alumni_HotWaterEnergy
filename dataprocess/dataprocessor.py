@@ -373,7 +373,7 @@ def dataframeplot(df, lazy = True, style = 'b--', ylabel : str = 'Y-axis', xlabe
 	"""
 
 	if not lazy:
-		width, height = 20, int(df.shape[1]*3)
+		width, height = 20, int(df.shape[1]*4)
 		plt.rcParams["figure.figsize"] = (width, height)
 		_, ax = plt.subplots(nrows = df.shape[1], squeeze=False)
 		for i,j in zip(df.columns,range(df.shape[1])):
